@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
+	apiendpoints "github.com/ParkerShelton/API-Endpoints"
+
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -25,9 +27,10 @@ func main() {
 }
 
 func getBooks(c *gin.Context) {
-	books := apiendpoints.getBooks(c)
+	// books := apiendpoints.getBooks(c)
 
-	c.IndentedJSON(http.StatusOK, books)
+	// c.IndentedJSON(http.StatusOK, books)
+	fmt.Println(apiendpoints.Test("Parker"))
 }
 
 func getBooksByID(c *gin.Context) {
